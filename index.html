@@ -1,0 +1,109 @@
+<!--
+    // Realizado por Ing. Miguel A. Jimenez
+    // el 25/7/2020
+-->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- Archivo CSS para App Jugadores -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Tarea Equipos de Miguel A. Jimenez</title>
+    <!-- Firestore -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+
+
+</head>
+
+<body>
+    <header class="site-header">
+        <h1>Equipos de Baseball</h1>
+    </header>
+
+    <section class="container">
+        <h2>Agregar Jugador</h2>
+        <input type="text" id="jugador" placeholder="Nombre del Jugador" class="form-control my-3" value="" required>
+
+        <input type="radio" id="equipo1" name="equipo" value="A" checked>
+        <label for="equipo1" class="radio-btn">Aguilas Cibaeñas</label>
+        <input type="radio" id="equipo2" name="equipo" value="L">
+        <label for="equipo2" class="radio-btn">Tigres del Licey</label><br>
+
+        <button class="btn btn-info" id="boton" onclick="save()">Crear Jugador</button>
+    </section>
+    <section class="contenedor">
+        <div class="tabla">
+            <a href="https://aguilas.com.do/"> <img src="images/Aguilas.jpg" alt="Logo de las Aguilas"></a>
+            <h3>Aguilas Cibaeñas</h3>
+            <table class="table tabla-aguilas th-tbl">
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col" style="text-align:center">NOMBRES DE LOS JUGADORES</th>
+                        <!-- <th scope="col">equipo</th> -->
+                    </tr>
+                </thead>
+                <tbody id="tabla_aguilas">
+
+                </tbody>
+            </table>
+        </div>
+        <div class="botones">
+            <button type="button" id="aLicey"    onclick = "buscaSelecAguilas()" class="btn btn-outline-info"> > </button>
+            <button type="button" id="boton"     onclick = "cambiaTodosA()" class="btn btn-outline-info"> >> </button>
+            <button type="button" id="aAguila"   onclick = "buscaSelecLicey()" class="btn btn-outline-info">  < </button>
+            <button type="button" id="allAguila" onclick = "cambiaTodosL()" class="btn btn-outline-info"> << </button>
+        </div>
+
+
+        <div class="tabla">
+            <a href="https://www.licey.com/"><img src="images/Licey.jpg" alt="Logo del Licey"></a>
+            <h3>Tigres del Licey</h4>
+                <table class="table tabla-licey th-tbl">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col" style="text-align:center">NOMBRES DE LOS JUGADORES</th>
+                            <!-- <th scope="col">equipo</th> -->
+                        </tr>
+                    </thead>
+                    <tbody id="tabla_licey">
+
+                    </tbody>
+                </table>
+        </div>
+    </section>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+<footer class="footer text-center" >
+    <p></p>
+    <p></p>
+        <p>Diseñado por:</p>
+        <p>Ing. Miguel Angel Jiménez S., MA &copy; 2020 - Todos los derechos reservados </p>
+</footer>
+
+</html>

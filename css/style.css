@@ -1,0 +1,99 @@
+/* Realizado por Ing. Miguel A. Jimenez
+   el 25/7/2020 */
+
+/*Globales*/
+.contenedor {
+	display: flex;
+	align-content: center;
+	flex-wrap: wrap;
+}
+
+.tabla {
+	flex-basis: calc(33.3% - 1rem);
+}
+
+.botones {
+	margin: auto 5px auto 5px;
+	background-color: white;
+}
+
+.boton {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding: auto auto ;
+	background-color: #4CAF50;
+	border-style: groove;
+	border-color: black;
+	border-width: 1px;
+}
+
+
+/* Header */
+.site-header {
+	max-width: 1200px;
+	margin: 0 auto 0 auto;
+	justify-content: flex-end;
+}
+
+.th-tbl {
+	align-content: center;
+	justify-content: flex-end;	
+}
+.table {
+	border-style: solid;
+	border-color: #b5b5b5;
+	border-width: 2px;
+	border: 1px solid #b5b5b5;
+}
+
+.tabla-licey {
+	background-color: #03A9F4;
+	font-size: 17px;
+}
+
+.tabla-aguilas {
+	background-color: #FFEB3B;
+	font-size: 17px;
+}
+
+.radio-btn {
+	color: black;
+	font-size: x-large;
+	color: green;
+	font-style: italic;
+	font-variant: small-caps;
+	box-sizing: initial;
+}
+
+h3 {
+	color: black;
+	font-style: italic;
+	text-align: center;
+	font-variant: small-caps;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+/* Body */
+body { 
+	background-color: #ffffff;
+}
+	
+img {
+	width: 150px;
+} 
+
+.contenedor {
+	max-width: 100rem;
+	margin: 0 auto 0 auto ;
+	justify-content: space-between;
+}
+
+
+/* Footer */
+.text-center {
+	color: red;
+	align-content: center;
+	justify-content: flex-end;
+}
+
